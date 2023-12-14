@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# System Files
+.DS_Store
+
+# Local development
+local-config.php
+wp-config.php
+.htaccess
+
+# Build files
+/css/
+/js/*.min.js
