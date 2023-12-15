@@ -1,0 +1,64 @@
+// Base font size
+$base-font-size: 16px; // Adjust as needed
+
+html {
+    font-size: $base-font-size;
+}
+
+// Function to convert px to rem
+@function px-to-rem($size, $base-font-size: 16px) {
+    @return $size / $base-font-size * 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $black;
+    font-family: $serif;
+}
+
+// Headings - Base Styles
+h1 {
+    font-size: px-to-rem(36px); // Adjust as needed
+}
+h2 {
+    font-size: px-to-rem(32px); // Adjust as needed
+}
+h3 {
+    font-size: px-to-rem(28px); // Adjust as needed
+}
+h4 {
+    font-size: px-to-rem(24px); // Adjust as needed
+}
+h5 {
+    font-size: px-to-rem(20px); // Adjust as needed
+}
+h6 {
+    font-size: px-to-rem(16px); // Adjust as needed
+}
+
+// Responsive Headings
+@media (max-width: 600px) {
+    h1 { font-size: px-to-rem(32px); }
+    h2 { font-size: px-to-rem(28px); }
+    h3 { font-size: px-to-rem(24px); }
+    h4 { font-size: px-to-rem(20px); }
+    h5 { font-size: px-to-rem(18px); }
+    h6 { font-size: px-to-rem(16px); }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    h1 { font-size: px-to-rem(34px); }
+    h2 { font-size: px-to-rem(30px); }
+    h3 { font-size: px-to-rem(26px); }
+    h4 { font-size: px-to-rem(22px); }
+    h5 { font-size: px-to-rem(20px); }
+    h6 { font-size: px-to-rem(18px); }
+}
+
+@media (min-width: 1025px) {
+    h1 { font-size: px-to-rem(36px); }
+    h2 { font-size: px-to-rem(32px); }
+    h3 { font-size: px-to-rem(28px); }
+    h4 { font-size: px-to-rem(24px); }
+    h5 { font-size: px-to-rem(20px); }
+    h6 { font-size: px-to-rem(16px); }
+}

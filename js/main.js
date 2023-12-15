@@ -1,13 +1,17 @@
 // main.js
 document.addEventListener('DOMContentLoaded', function () {
-    // var menuToggle = document.getElementById('menu-toggle');
-    // var siteNavigation = document.getElementById('site-navigation');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuClose = document.querySelector('.menu-close');
+    const siteNavigation = document.getElementById('site-navigation');
 
-    // if (!menuToggle || !siteNavigation) {
-    //     return;
-    // }
+    // Function to toggle the menu
+    function toggleMenu() {
+        siteNavigation.classList.toggle('toggled');
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+    }
 
-    // menuToggle.onclick = function() {
-    //     siteNavigation.classList.toggle('toggled');
-    // };
+    // Event listeners
+    menuToggle.addEventListener('click', toggleMenu);
+    menuClose.addEventListener('click', toggleMenu);
 });

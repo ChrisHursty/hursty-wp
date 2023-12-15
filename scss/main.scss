@@ -1,19 +1,18 @@
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// Variables
+$black: #282828;
+$white: #f2f2f2;
+$primary: #e94d36; // Orange
+$secondary: #3939A3; // Purple
+
+// Fonts
+$serif: 'Abril Fatface', serif;
+$sans-serif: 'Poppins', sans-serif;
+
 // Import base styles
 @import 'base/reset';
-
-// main.scss
-body {
-    background-color: rgb(234, 25, 25);
-    font-family: 'Montserrat', sans-serif;
-}
-
-.main-navigation.toggled {
-    // Styles for when the menu is open
-    display: block;
-}
-
-@media screen and (min-width: 768px) {
-    .main-navigation.toggled {
-        display: none;
-    }
-}
+@import 'base/common';
+@import 'base/header';
+@import 'base/responsive-fonts';

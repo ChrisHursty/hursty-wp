@@ -13,7 +13,7 @@ const browserSyncInstance = browserSync.create();
 
 // Compile SASS & auto-inject into browsers
 function compileSass() {
-    return src(['scss/*.scss'])
+    return src('scss/**/*.scss') // Changed to include all subdirectories
         .pipe(changed('css'))
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer('last 2 versions'))
@@ -27,11 +27,8 @@ function serve() {
         proxy: "iamchrishurst.local/"
     });
 
-    watch(['scss/*.scss'], compileSass);
-    watch(['*.php', 'js/**/*.js'], function(cb) {
-        browserSyncInstance.reload();
-        cb();
-    });
+    watch('scss/**/*.scss', compileSass); // Changed to include all subdirectories
+    watch(['*.php', 'js/**/*.js']).on('change', browserSyncInstance.reload);
 }
 
 // Minify compiled CSS
