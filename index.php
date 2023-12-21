@@ -28,7 +28,12 @@ get_header(); ?>
         ?>
 
     </main><!-- #main -->
-
+    <div class="cta">
+        <?php get_template_part('template-parts/call-to-action'); ?>
+    </div>
+    <div class="testimonials">
+        <?php get_template_part('template-parts/testimonial-slider'); ?>
+    </div>
 <?php
 get_sidebar();
 get_footer();

@@ -15,3 +15,28 @@ document.addEventListener('DOMContentLoaded', function () {
     menuToggle.addEventListener('click', toggleMenu);
     menuClose.addEventListener('click', toggleMenu);
 });
+
+
+// Add your custom JS here.
+// Testimonials Slider 12/19/23
+jQuery(document).ready(function($) {
+    $(".testimonial-carousel").owlCarousel({
+        items: 2,
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true
+            },
+            600: {
+                items: 2,
+                nav: false
+            }
+        },
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true
+    });
+});

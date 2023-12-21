@@ -3,3 +3,54 @@ body {
     background-color: #fff;
     font-family: $sans-serif;
 }
+
+// Testimonials Slider
+.owl-carousel {
+    display: flex;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.testimonial-slide {
+    flex: 0 0 50%; /* Show 2 side by side on large screens */
+}
+
+@media only screen and (max-width: 768px) {
+    .testimonial-slide {
+        flex: 0 0 100%; /* Show 1 on small screens */
+    }
+}
+
+// Call to Action
+.call-to-action {
+    padding: 1rem; // Adjust as needed
+    text-align: center;
+
+    .cta-container {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .cta-heading {
+        font-size: 2rem; // Adjust as needed
+        margin-bottom: 1rem;
+    }
+
+    .cta-text {
+        font-size: 1.2rem; // Adjust as needed
+        margin-bottom: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px; // Adjust as needed
+        text-decoration: none;
+        font-size: 1rem; // Adjust as needed
+        display: inline-block; // Center the button
+    }
+}
